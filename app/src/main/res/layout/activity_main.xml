@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/nature_4"
+    android:orientation="vertical"
     tools:context=".MainActivity">
 
     <androidx.appcompat.widget.Toolbar
@@ -13,23 +14,69 @@
         android:layout_height="wrap_content"
         android:background="@color/nature_1"
         android:elevation="@dimen/cardview_default_elevation"
-        app:layout_constraintTop_toTopOf="parent"
         android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
         app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
         app:title="Conversor de Unidades"
-        app:titleMarginStart="10dp"
-        ></androidx.appcompat.widget.Toolbar>
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="173dp"
-        android:layout_marginTop="410dp"
-        android:layout_marginEnd="182dp"
-        android:layout_marginBottom="417dp"
-        android:text="TextView"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-</androidx.constraintlayout.widget.ConstraintLayout>
+        app:titleMarginStart="10dp"></androidx.appcompat.widget.Toolbar>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:visibility="visible">
+
+        <LinearLayout
+            android:layout_width="389dp"
+            android:layout_height="match_parent"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/unitTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="TextView"
+                android:textSize="24sp"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/inputUnit"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Button" />
+
+            <EditText
+                android:id="@+id/inputValue"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:inputType="numberDecimal"
+                android:textAlignment="center"
+                android:textSize="20sp" />
+
+            <ImageButton
+                android:id="@+id/switchUnits"
+                android:layout_width="64dp"
+                android:layout_height="56dp"
+                app:srcCompat="@drawable/swap_icon" />
+
+            <Button
+                android:id="@+id/outputUnit"
+                style="@style/Base.Theme.UnitsConverter"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Button" />
+
+            <TextView
+                android:id="@+id/outputValue"
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:text="TextView"
+                android:textAlignment="center"
+                android:textSize="20sp" />
+
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

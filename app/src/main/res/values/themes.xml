@@ -2,7 +2,11 @@
     <!-- Base application theme. -->
     <style name="Base.Theme.UnitsConverter" parent="Theme.Material3.DayNight.NoActionBar">
         <!-- Customize your light theme here. -->
-        <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
+        <item name="colorPrimary">@color/nature_1</item>
+        <item name="colorSecondary">@color/nature_2</item>
+        <item name="colorTertiary">@color/nature_3</item>
+        <item name="colorButtonNormal">@color/nature_2</item>
+        <item name="textAppearanceButton">@color/text_1</item>
     </style>
 
     <style name="Theme.UnitsConverter" parent="Base.Theme.UnitsConverter" />
